@@ -7,7 +7,8 @@ const experience = document.getElementById("experience");
 const email = document.getElementById("email");
 const btnSumbit = document.getElementById("btn-submit");
 const btnEdit = document.getElementById("btn-edit");
-const formContainer = document.getElementById("form-container");
+const modal = document.getElementById("modal");
+const btnClose = document.getElementById("btn-close");
 
 const handleReadProfile = () => {
   const displayNama = document.getElementById("display-nama");
@@ -94,6 +95,10 @@ const handleEdit = () => {
 };
 
 btnEdit.addEventListener("click", () => {
-  formContainer.style.display = "block";
+  modal.classList.remove("hidden");
   handleEdit();
+});
+
+btnClose.addEventListener("click", () => {
+  modal.classList.add("hidden");
 });
