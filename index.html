@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="h-screen w-full flex flex-col justify-start items-start md:p-12 gap-14"
+    >
+      <!-- PROFILE SECTION -->
+      <div
+        class="flex flex-col justify-center items-center md:gap-8 gap-2 w-full"
+      >
+        <h1 class="text-4xl">Section Profile</h1>
+        <div
+          class="flex md:flex-row flex-col justify-center items-start md:shadow-xl gap-8 md:gap-14 py-10 px-24"
+        >
+          <div
+            class="flex md:items-start items-center justify-center md:justify-start w-44 h-44"
+          >
+            <img
+              class="rounded-full flex items-center justify-center"
+              src="./assets/profile.png"
+              alt="Profile"
+            />
+          </div>
+          <div
+            class="flex md:items-start items-center md:justify-start justify-center flex-col gap-2 md:gap-4"
+          >
+            <h1 class="text-2xl font-bold" id="display-nama"></h1>
+            <h2 class="text-md text-gray-500" id="display-role">
+              Backend Developer
+            </h2>
+            <div class="flex justify-between md:items-start items-center gap-4">
+              <button
+                class="bg-blue-600 px-7 py-2 text-white rounded"
+                id="btn-edit"
+              >
+                Edit
+              </button>
+              <button class="px-6 py-2 border-2 border-red-700 rounded">
+                Resume
+              </button>
+            </div>
+          </div>
+          <div class="rounded md:px-8">
+            <div
+              class="grid grid-cols-2 justify-start items-start h-auto w-full"
+            >
+              <div class="flex flex-col gap-2">
+                <p class="font-bold text-gray-700">Availability</p>
+                <p class="font-bold text-gray-700">Usia</p>
+                <p class="font-bold text-gray-700">Lokasi</p>
+                <p class="font-bold text-gray-700">Pengalaman</p>
+                <p class="font-bold text-gray-700">Email</p>
+              </div>
+              <div class="flex flex-col gap-2">
+                <p class="text-gray-500" id="display-availability">Full Time</p>
+                <p class="text-gray-500" id="display-usia">19</p>
+                <p class="text-gray-500" id="display-lokasi">Jakarta</p>
+                <p class="text-gray-500" id="display-experience">2</p>
+                <p class="text-gray-500" id="display-email">email@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM SECTION -->
+      <div id="form-container" class="hidden w-full">
+        <div
+          class="flex flex-col justify-center items-center gap-2 md:px-40 w-full"
+        >
+          <h1 class="text-4xl">Section Form</h1>
+          <div
+            class="flex flex-col w-full justify-start items-start shadow-xl gap-2 py-10 px-8"
+          >
+            <div class="flex flex-col gap-1 w-full">
+              <label class="font-semibold">Nama</label>
+              <input
+                id="nama"
+                type="text"
+                placeholder="Nama Anda"
+                class="border-2 p-2 rounded"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label class="font-semibold">Role</label>
+              <input
+                id="role"
+                type="text"
+                placeholder="Role Anda"
+                class="border-2 p-2 rounded"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label class="font-semibold">Availability</label>
+              <input
+                id="availability"
+                type="text"
+                placeholder="Availability"
+                class="border-2 p-2 rounded"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label class="font-semibold">Usia</label>
+              <input
+                id="usia"
+                type="number"
+                placeholder="Usia Anda"
+                class="border-2 p-2 rounded"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label class="font-semibold">Lokasi</label>
+              <input
+                id="lokasi"
+                type="text"
+                placeholder="Lokasi Anda"
+                class="border-2 p-2 rounded"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label class="font-semibold">Years Experience</label>
+              <input
+                id="experience"
+                type="number"
+                placeholder="Years Experience"
+                class="border-2 p-2 rounded"
+              />
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label class="font-semibold">Email</label>
+              <input
+                id="email"
+                type="text"
+                placeholder="Email Anda"
+                class="border-2 p-2 rounded"
+              />
+            </div>
+            <button
+              id="btn-submit"
+              class="flex bg-red-500 p-2 rounded hover:bg-red-600 text-white font-semibold transition-all gap-1 w-full items-center justify-center"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
